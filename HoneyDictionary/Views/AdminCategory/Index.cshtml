@@ -1,0 +1,55 @@
+﻿@using EntityLayer.Concrete
+@model List<Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetCategoryList</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <br />
+    <br />
+    <div>
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>#</th>
+                <th>Kategori Adı</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+                <th>Başlıklar</th>
+            </tr>
+            @*@for (int i = 0; i < Model.Count(); i++)
+                {
+                    <tr>
+                        <th>@Model[i].CategoryID</th>
+                        <th>@Model[i].CategoryName</th>
+                        <th>@Model[i].CategoryDescription</th>
+                        <th>@Model[i].CategoryStatus</th>
+                    </tr>
+                }*@
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@item.CategoryID</th>
+                    <td>@item.CategoryName</td>
+                    <td><a class="btn btn-danger" href="/AdminCategory/DeleteCategory/@item.CategoryID">Sil</a></td>
+                    <td><a class="btn btn-warning" href="/AdminCategory/EditCategory/@item.CategoryID">Güncelle</a></td>
+                    <td><a class="btn btn-info" href="#">Başlıklar</a></td>
+                </tr>
+            }
+        </table>
+
+        <a class="btn btn-info" href="/AdminCategory/AddCategory">Yeni Kategori</a>
+
+    </div>
+</body>
+</html>
+

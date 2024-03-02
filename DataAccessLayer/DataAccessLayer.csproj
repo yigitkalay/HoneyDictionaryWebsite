@@ -54,6 +54,14 @@
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Concrete\Context.cs" />
     <Compile Include="Concrete\Repositories\GenericRepository.cs" />
+    <Compile Include="Migrations\202403021848307_mig_writer_edit.cs" />
+    <Compile Include="Migrations\202403021848307_mig_writer_edit.designer.cs">
+      <DependentUpon>202403021848307_mig_writer_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403021929382_mig_writer_title_add.cs" />
+    <Compile Include="Migrations\202403021929382_mig_writer_title_add.designer.cs">
+      <DependentUpon>202403021929382_mig_writer_title_add.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -67,7 +75,14 @@
       <Name>EntityLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202403021848307_mig_writer_edit.resx">
+      <DependentUpon>202403021848307_mig_writer_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403021929382_mig_writer_title_add.resx">
+      <DependentUpon>202403021929382_mig_writer_title_add.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

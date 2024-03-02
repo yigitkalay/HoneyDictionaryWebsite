@@ -1,1 +1,1 @@
-# This project is currently under construction. I look forward to its completion :)
+The project continues rapidly. It will be completed very soon. Until it is completed, you can review my other projects 😋
