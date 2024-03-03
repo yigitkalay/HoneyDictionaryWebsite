@@ -31,3 +31,7 @@ D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
 D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_edit.resources
 D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache
 D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_writer_title_add.resources
+D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_WriterImage_edit.resources
+D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_WriterStatus_Add.resources
+D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_ContetStatus_Add.resources
+D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_HeadingStatus_Add.resources

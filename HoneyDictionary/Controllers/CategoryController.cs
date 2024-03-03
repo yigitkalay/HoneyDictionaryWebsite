@@ -1,6 +1,5 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
-using DataAccessLayer.Abstract;
 using DataAccessLayer.Concrete.Repositories;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
@@ -14,33 +13,62 @@ namespace HoneyDictionary.Controllers
 {
     public class CategoryController : Controller
     {
-        // GET: Category
         CategoryManager cm = new CategoryManager(new GenericRepository<Category>());
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult GetCategoryList()
-        {
             var categoryValues = cm.GetList();
             return View(categoryValues);
-            //return View();
         }
+
         [HttpGet]
         public ActionResult AddCategory()
         {
             return View();
         }
+
         [HttpPost]
-        public ActionResult AddCategory(Category p)
+        public ActionResult AddCategory(Category category)
         {
             CategoryValidator categoryValidator = new CategoryValidator();
-            ValidationResult validationResult = categoryValidator.Validate(p);
+            ValidationResult validationResult = categoryValidator.Validate(category);
             if (validationResult.IsValid)
             {
-                cm.CategoryAdd(p);
-                return RedirectToAction("GetCategoryList");
+                cm.CategoryAdd(category);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in validationResult.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+        }
+
+        public ActionResult DeleteCategory(int id)
+        {
+            var categoryValue = cm.GetByID(id);
+            cm.CategoryDelete(categoryValue);
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult EditCategory(int id)
+        {
+            var categoryValue = cm.GetByID(id);
+            return View(categoryValue);
+        }
+
+        [HttpPost]
+        public ActionResult EditCategory(Category category)
+        {
+            CategoryValidator categoryValidator = new CategoryValidator();
+            ValidationResult validationResult = categoryValidator.Validate(category);
+            if (validationResult.IsValid)
+            {
+                cm.CategoryUpdate(category);
+                return RedirectToAction("Index");
             }
             else
             {
