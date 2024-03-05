@@ -78,6 +78,14 @@
     <Compile Include="Migrations\202403032118385_mig_HeadingStatus_Add.designer.cs">
       <DependentUpon>202403032118385_mig_HeadingStatus_Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403051236565_mig_add_messageClass.cs" />
+    <Compile Include="Migrations\202403051236565_mig_add_messageClass.designer.cs">
+      <DependentUpon>202403051236565_mig_add_messageClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403051933299_mig_message_drop.cs" />
+    <Compile Include="Migrations\202403051933299_mig_message_drop.designer.cs">
+      <DependentUpon>202403051933299_mig_message_drop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -109,6 +117,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403032118385_mig_HeadingStatus_Add.resx">
       <DependentUpon>202403032118385_mig_HeadingStatus_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403051236565_mig_add_messageClass.resx">
+      <DependentUpon>202403051236565_mig_add_messageClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403051933299_mig_message_drop.resx">
+      <DependentUpon>202403051933299_mig_message_drop.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
