@@ -86,6 +86,14 @@
     <Compile Include="Migrations\202403051933299_mig_message_drop.designer.cs">
       <DependentUpon>202403051933299_mig_message_drop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403080753318_mig_add_ImageFileTable.cs" />
+    <Compile Include="Migrations\202403080753318_mig_add_ImageFileTable.designer.cs">
+      <DependentUpon>202403080753318_mig_add_ImageFileTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403081238367_mig_add_AdminTable.cs" />
+    <Compile Include="Migrations\202403081238367_mig_add_AdminTable.designer.cs">
+      <DependentUpon>202403081238367_mig_add_AdminTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -123,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403051933299_mig_message_drop.resx">
       <DependentUpon>202403051933299_mig_message_drop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403080753318_mig_add_ImageFileTable.resx">
+      <DependentUpon>202403080753318_mig_add_ImageFileTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403081238367_mig_add_AdminTable.resx">
+      <DependentUpon>202403081238367_mig_add_AdminTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

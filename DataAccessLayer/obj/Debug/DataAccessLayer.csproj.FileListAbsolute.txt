@@ -37,3 +37,5 @@ D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrat
 D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_HeadingStatus_Add.resources
 D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_messageClass.resources
 D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_message_drop.resources
+D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_ImageFileTable.resources
+D:\ProjectFiles\HoneyDictionary\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig_add_AdminTable.resources
