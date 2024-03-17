@@ -14,6 +14,8 @@ namespace HoneyDictionary.Controllers
     public class CategoryController : Controller
     {
         CategoryManager cm = new CategoryManager(new GenericRepository<Category>());
+
+        [Authorize(Roles="B")]
         public ActionResult Index()
         {
             var categoryValues = cm.GetList();
